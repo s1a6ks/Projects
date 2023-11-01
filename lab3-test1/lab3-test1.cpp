@@ -1,25 +1,22 @@
 #include <iostream>
-#include <math.h>
 
 using namespace std;
 
-int main()
-{   
-    double s,t,v;
-    cout << "enter speed" << endl;
-    cin >> s;
-    cout << "enter time" << endl;
-    cin >> t;
+int main() {
+    double S, T;
 
-    v = s / t; 
+    cout << "Enter the distance in kilometers: ";
+    cin >> S;
+    cout << "Enter the time in hours: ";
+    cin >> T;
 
-    double v1 = v * 60; 
+    double V = S / T;
 
-    if(v1 <= 60)
-        cout << "the driver did not break the rules: " << v1 << " km/h";
-    else
-        cout<< "\nthe driver broke the rules :"<< v1 << " km/h";
-    
+    if (V > 60) {
+        cout << "The driver violated the traffic rules." << endl;
+    } else {
+        cout << "The driver did not violate the traffic rules." << endl;
+    }
+
     return 0;
-
 }
